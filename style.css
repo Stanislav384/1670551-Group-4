@@ -27,9 +27,15 @@ head{
 body{
     background-color: white;
     height: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
     
 
-    
+
 }
 .choto {
     text-align: right;
@@ -39,12 +45,154 @@ body{
     justify-content: space-between;
     gap: 60px;
 }
-.vtoroy{
-    text-align: right;
+
+    
+
+.but1{
     font-size: 22px;
     display: flex;
     margin-top: 5px;
-    justify-content: space-between;
-    gap: 60px;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    left: 1000px;
+}
+.but1:hover{
+    
+    
+    color: rgb(255, 123, 0);
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 123, 0);
+   
+
+}
+.but2{
+    font-size: 22px;
+    display: flex;
+    margin-top: 5px;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    left: 1100px;
+}
+.but2:hover{
+    
+    
+    color: rgb(255, 123, 0);
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 123, 0);
+
+}
+.but3{
+    font-size: 22px;
+    display: flex;
+    margin-top: 5px;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    left: 1200px;
+    
+}
+.but3:hover{
+    
+    
+    color: rgb(255, 123, 0);
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 123, 0);
+
+}
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: white;
 }
 
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 70%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    left: calc(70% - 60px); 
+}
+
+.info-panel {
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.info-panel h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-panel p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
