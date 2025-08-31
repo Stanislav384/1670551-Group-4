@@ -3,6 +3,48 @@
     padding:0;
 }
 
+header{
+    position: fixed;  /*це я подивився у нейронки бо не знав як зробити так щоб меню зверху було */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    z-index: 1000;     
+    
+}
+
+
+    
+
+head{
+    background-color: white;
+
+}
+
 body{
     background-color: white;
+    height: 2000px;
+    
+
+    
 }
+.choto {
+    text-align: right;
+    font-size: 22px;
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    gap: 60px;
+}
+.vtoroy{
+    text-align: right;
+    font-size: 22px;
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    gap: 60px;
+}
+
