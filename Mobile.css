@@ -1,0 +1,48 @@
+.bolshe{
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    
+}
+.phono{
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    font-size: 30px;
+    
+}
+.phono2{
+    position: absolute;
+    top:800px;
+    left: 100px;
+    text-align: center;
+    padding: 5px;
+}
+.phono3{
+    position: absolute;
+    top:800px;
+    left: 525px;
+    text-align: center;
+    padding: 5px;
+}
+.phono4{
+    position: absolute;
+    top:800px;
+    left: 850px;
+    text-align: center;
+    padding: 5px;
+}
+.phono5{
+    position: absolute;
+    top:950px;
+    left: 1200px;
+    text-align: center;
+    padding: 5px;
+    color: black;
+}
+.bolshe2{
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    margin-top: 10px;
+}
