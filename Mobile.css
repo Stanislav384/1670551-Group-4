@@ -1,34 +1,105 @@
-.bolshe, .bolshe2 {
+/* === Общие стили === */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  display: block;
+}
+
+.menu-buttons a, 
+.menu-buttons-link a {
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.menu-buttons-link {
+  margin-left: auto;
+}
+
+/* === Интро блок === */
+.intro {
   text-align: center;
+  padding: 30px 20px;
+}
+
+.intro h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.intro p {
+  font-size: 14px;
+  color: #444;
+}
+
+.bolshe a {
+  display: inline-block;
+  margin-top: 10px;
   font-size: 15px;
-  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* === Баннер === */
+.banner-section {
+  text-align: center;
 }
 
 .banner {
   width: 100%;
   max-width: 1500px;
   height: auto;
+  border-radius: 12px;
   display: block;
   margin: 20px auto;
-  border-radius: 12px;
 }
 
+/* === Карточки продуктов === */
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
-  margin: 40px 0;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
 }
 
 .product-card {
-  width: 250px;
+  width: 280px;
+  background: #fff;
+  border-radius: 12px;
   text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
 }
 
 .product-card img {
   width: 100%;
-  height: auto;
   border-radius: 12px;
   margin-bottom: 10px;
 }
@@ -46,12 +117,12 @@
 
 .product-card a {
   display: inline-block;
-  margin-top: 5px;
-  text-decoration: none;
-  color: black;
+  margin-top: 8px;
   font-weight: bold;
+  font-size: 14px;
 }
 
+/* === All Products кнопка === */
 .phono5 {
   text-align: center;
   margin: 40px 0;
@@ -59,164 +130,22 @@
 
 .phono5 a {
   font-size: 20px;
-  color: black;
-  text-decoration: none;
   font-weight: bold;
 }
 
-/* ✅ Redmi banner */
-.redmi-banner {
-  position: relative;
-  width: 100%;
-  max-width: 1500px;
-  margin: 20px auto;
-}
-
-.redmi-banner img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* текст поверх банера справа */
-.redmi-text {
-  position: absolute;
-  top: 50%;
-  right: 50px;
-  transform: translateY(-50%);
-  text-align: right;
-  color: black;
-  background: rgba(255,255,255,0.6); /* напівпрозорий фон для кращої читабельності */
-  padding: 15px 20px;
-  border-radius: 12px;
-}
-
-.redmi-text h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.redmi-text p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.redmi-text a {
-  font-size: 18px;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-/* 📱 адаптивність */
+/* === Адаптивность === */
 @media (max-width: 768px) {
-  .redmi-text {
-    position: static;
-    transform: none;
-    text-align: center;
-    margin-top: 15px;
-    background: none; /* прибираємо фон, щоб не заважав */
-    padding: 0;
+  header {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .redmi-text h2 {
-    font-size: 24px;
+  .products {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .redmi-text p,
-  .redmi-text a {
-    font-size: 16px;
+  .product-card {
+    width: 90%;
   }
-}
-.library-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 30px;
-}
-
-.category {
-    
-    height: 250px;
-    text-align: center;
-    position: relative;
-
-}
-
-
-.category img {
-    width: auto;
-    height: 100%;
-    border-radius: 10px;
-    display: block;
-    transform: translateX(-20%);
-    transform: translateY(-10%);
-    z-index: 1;
-}
-
-
-.name {
-    .name {
-    position: absolute;
-    top: 10px;   /* відступ від верху контейнера */
-    left: 10px;  /* відступ від лівого краю */
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    font-weight: 600;
-    background: rgba(0,0,0,0.5); /* напівпрозорий фон для кращої читабельності */
-    padding: 8px 12px;
-    border-radius: 6px;
-    z-index: 2; /* текст поверх картинки */
-}
-    
-  
-}
-.category2 {
-    
-    height: 550px;
-    position: relative;
-    margin: 20px;
-}
-
-.category2 img {
-    width: auto;
-    height: 100%;
-    transform: translate(10%, -5%); /* зсув: вправо та трохи підняти */
-    border-radius: 10px;
-    display: block;
-    z-index: 1;
-}
-
-.category2 .name {
-    position: absolute;
-    top: 20px;
-    right: 20px;  /* текст справа */
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-    font-weight: 600;
-    
-    padding: 6px 10px;
-    border-radius: 6px;
-    z-index: 2;
-}
-
-/* === Адаптивність === */
-@media (max-width: 768px) {
-    .category1, .category2 {
-        width: 90%;
-        height: auto;
-        margin: 15px auto;
-    }
-    .category1 img, .category2 img {
-        transform: translate(0, 0); /* прибираємо зсув на маленьких екранах */
-        height: auto;
-        width: 100%;
-    }
-    .category1 .name, .category2 .name {
-        position: static;
-        background: rgba(0,0,0,0.3);
-        text-align: center;
-        margin-top: 10px;
-    }
 }
