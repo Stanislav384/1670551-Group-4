@@ -1,0 +1,51 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background:#fff;
+    margin:0;
+    padding:20px 0;
+  }
+
+  header { max-width:1400px; margin:0 auto 30px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; }
+  .menu-buttons a, .menu-buttons-link a { margin:0 8px; text-decoration:none; color:#333; font-weight:600; font-size:14px; }
+  .bolshe { text-align:center; margin:8px 0 16px; }
+  .bolshe a { text-decoration:none; color:#7b2fa1; font-weight:600; }
+
+  .banner {
+    width: 100%;
+    max-width: 1500px;   /* как верхний */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  .card-tovar {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    min-height: 420px;
+  }
+
+  .img-tovar { width:100%; height:260px; display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+  .img-tovar img { max-width: 280px; max-height:100%; object-fit:contain; }
+
+  .name-tovar { font-size:24px; font-weight:700; margin-bottom:8px; color:#222; }
+  .description-tovar { color:#777; font-size:15px; line-height:1.4; margin-bottom:22px; }
+
+  .card-tovar a { margin-top:auto; display:inline-block; background:#000; color:#fff; text-decoration:none; padding:12px 30px; border-radius:10px; font-weight:700; }

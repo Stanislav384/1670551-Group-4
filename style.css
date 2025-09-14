@@ -6,6 +6,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    height: 300vh;
 }
 
 header {
@@ -57,3 +58,4 @@ header {
 .menu-buttons-link a:hover {
     color: #ff6900;
 }
+
