@@ -1,9 +1,80 @@
 
 
+
+/* === Общие стили === */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  display: block;
+}
+
+.menu-buttons a, 
+.menu-buttons-link a {
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.menu-buttons-link {
+  margin-left: auto;
+}
+
+/* === Интро блок === */
+.intro {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.intro h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.intro p {
+  font-size: 14px;
+  color: #444;
+}
+
+.bolshe a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* === Баннер === */
+.banner-section {
+  text-align: center;
+}
+
+
 .banner {
   width: 100%;
   max-width: 1500px;
   height: auto;
+
   display: block;
   margin: 20px auto;
   border-radius: 12px;
@@ -127,4 +198,84 @@
 }
 .card-tovar a:hover {
     background-color: #2e302d;
+}
+=======
+  border-radius: 12px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* === Карточки продуктов === */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.product-card {
+  width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #444;
+  margin: 2px 0;
+}
+
+.product-card a {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* === All Products кнопка === */
+.phono5 {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.phono5 a {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
 }
