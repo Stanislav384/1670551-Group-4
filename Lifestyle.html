@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Xiaomi Slider</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Lifestyle.css">
+    <link rel="stylesheet" href="SmartHome.css">
 </head>
-<body>
+<body style="min-height: 500vh;">
     <header>
         <div class="logo">
-            <img src="https://img.icons8.com/?size=100&id=WovKWSCrsTFO&format=png&color=000000" width="40px" height="40px">
+            <img src="https://img.icons8.com/?size=100&id=WovKWSCrsTFO&format=png&color=000000" width="40px" height="40px" a href="index.html">
         </div>
 
         <div class="menu-buttons">
@@ -28,10 +28,269 @@
             <a href="https://new.c.mi.com/global?utm_source=mistore&utm_medium=official_web_tabcommunity&utm_campaign=official_web_mistore_global/?t=1">Community</a>
         </div>
     </header>
-    
 
-    
+    <div class="super-slider-wrapper">
+        <div class="super-slider-content">
 
-    <script src="script.js"></script>
-</body>
-</html>
+            <!-- INFO PANEL 1 -->
+            <div class="info-panel active" data-product-id="pad-gray">
+                <span class="tagline">Xiaomi Electric Scooter 5 |MAX|</span>
+                
+                <p class="product-slogan">Go futher, ride smoother </p>
+                   
+                <button class="learn-more-button" ><a href="https://www.mi.com/global/product/xiaomi-electric-scooter-5-max/">Learn more</a></button>
+            </div>
+
+            <!-- INFO PANEL 2 -->
+            <div class="info-panel" data-product-id="pad-blue">
+                <span class="tagline">Xiaomi HyperAI</span>
+                <h1 class="product-title">Xiaomi Pad 7 Pro</h1>
+                <p class="product-slogan">Синий</p>
+                <ul class="features-list">
+                    <li>Мощный процессор Snapdragon</li>
+                    <li>Dolby Atmos, четыре динамика</li>
+                </ul>
+                <button class="learn-more-button">Learn more</button>
+            </div>
+
+            <!-- INFO PANEL 3 -->
+            <div class="info-panel" data-product-id="pad-green">
+                <span class="tagline">Xiaomi HyperAI</span>
+                <h1 class="product-title">Xiaomi Pad 123 Pro</h1>
+                <p class="product-slogan">Зеленый</p>
+                <ul class="features-list">
+                    <li>14-дюймовый 2.8K IPS дисплей</li>
+                    <li>Емкий аккумулятор 10000 мАч</li>
+                </ul>
+                <button class="learn-more-button">Learn more</button>
+            </div>
+
+            <!-- INFO PANEL 4 -->
+            <div class="info-panel" data-product-id="pad-white">
+                <span class="tagline">Xiaomi HyperAI</span>
+                <h1 class="product-title">Xiaomi Pad 7 Max</h1>
+                <p class="product-slogan">Белый</p>
+                <ul class="features-list">
+                    <li>Поддержка 120Hz AMOLED</li>
+                    <li>Поддержка стилуса SmartPen</li>
+                </ul>
+                <button class="learn-more-button">Learn more</button>
+            </div>
+
+            <!-- INFO PANEL 5 -->
+            <div class="info-panel" data-product-id="pad-black">
+                <span class="tagline">Xiaomi HyperAI</span>
+                <h1 class="product-title">Xiaomi Pad Ultra</h1>
+                <p class="product-slogan">Черный</p>
+                <ul class="features-list">
+                    <li>16 ГБ ОЗУ / 1 ТБ памяти</li>
+                    <li>Поддержка 5G + WiFi 7</li>
+                </ul>
+                <button class="learn-more-button">Learn more</button>
+            </div>
+
+            <!-- SLIDER -->
+            <div class="image-slider-area">
+                <div class="slides-container">
+                    <!-- SLIDE 1 -->
+                    <div class="slide-item active" data-product-id="pad-gray">
+                        <img src="https://i02.appmifile.com/822_operator_global/03/03/2025/4689d783847b879861b87defd016482b.jpg?thumb=1&w=5120&f=webp&q=85" alt="Xiaomi Pad 7 Pro - Серый">
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="slide-item" data-product-id="pad-blue">
+                        <img src="https://mobileplanet.ua/uploads/small_photos/2025-3-22/magazin-mobileplanet-xiaomi-pad-7-pro-8-256gb-gray-vhu5412eu-3394911556.webp" alt="Xiaomi Pad 7 Pro - Синий">
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="slide-item" data-product-id="pad-green">
+                        <img src="https://i02.appmifile.com/46_operator_global/02/03/2025/23c441853593554c52b3bdcb81e5f0f5.jpg?thumb=1&w=5120&f=webp&q=85" alt="Xiaomi Pad 123 Pro - Зеленый">
+                    </div>
+
+                    <!-- SLIDE 4 -->
+                    <div class="slide-item" data-product-id="pad-white">
+                        <img src="https://i02.appmifile.com/123_operator_global/04/03/2025/white_pad.jpg" alt="Xiaomi Pad 7 Max - Белый">
+                    </div>
+
+                    <!-- SLIDE 5 -->
+                    <div class="slide-item" data-product-id="pad-black">
+                        <img src="https://i02.appmifile.com/123_operator_global/05/03/2025/black_pad.jpg" alt="Xiaomi Pad Ultra - Черный">
+                    </div>
+                </div>
+
+                <!-- SLIDER CONTROLS -->
+                <button class="nav-button prev-button">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="nav-button next-button">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <!-- DOTS -->
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+    </div>
+<h2 style="text-align:center; margin:6px 0 0;">Outdoors</h2>
+
+<div class="bolshe"><a href="https://www.mi.com/global/product-list/outdoor/">More</a></div>
+<div class="product-grid2">
+  <div class="card-tovar2">
+    <div class="img-tovar2">
+      <img src="https://i02.appmifile.com/100_operatorx_operatorx_opx/18/07/2025/07b15eab432351fdeaa44bf7d226af7c.png?thumb=1&w=1000&f=webp&q=85" alt="Xiaomi">
+    </div>
+    <div class="name-tovar2">Xiaomi Electric Scooter 5 Plus</div>
+    <div class="description-tovar2">60km long travel range reduces charging frequency</div>
+    <a href="https://www.mi.com/global/product/xiaomi-electric-scooter-5-plus/">Learn more</a>
+  </div>
+
+  <div class="card-tovar2">
+    <div class="img-tovar2">
+      <img src="https://i02.appmifile.com/885_operatorx_operatorx_opx/28/07/2023/5bc93f8f5b50abdd60eb2c59eebbd469.png?thumb=1&w=1000&f=webp&q=85" alt="Xiaomi">
+    </div>
+    <div class="name-tovar2">Xiaomi Portable Electric Air 
+    Compressor 2</div>
+    <div class="description-tovar2">The 2nd generation air compressor with faster tire inflation</div>
+    <a href="https://www.mi.com/global/product/xiaomi-portable-electric-air-compressor-2/">Learn more</a>
+  </div>
+</div>
+<div class="product-grid">
+
+
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i02.appmifile.com/460_operatorx_operatorx_opx/10/07/2023/8b2d1cc104bfb30051b05ffb0efbde5d.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi Multi-function
+        Camping Lantern</div>
+      <div class="description-tovar">Separable design adn multi-colour effects for
+        various scenarios 
+      </div>
+      <a href="https://www.mi.com/global/product/xiaomi-multi-function-camping-lantern/">Learn More</a>
+    </div>
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i02.appmifile.com/20_operatorx_operatorx_opx/02/07/2025/53ea21f41c84fd2421a8cb369a9f143e.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi Smart Audio
+        Glasses</div>
+      <div class="description-tovar">Open-ear sound technology for your listening
+        freedom
+      </div>
+      <a href="https://www.mi.com/global/product/xiaomi-smart-audio-glasses/">Learn More</a>
+    </div>
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i02.appmifile.com/779_operatorx_operatorx_opx/30/07/2024/67a0ea60e5cae646a6cd3469681d3cab.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi Roll Top Casual
+        Backpack</div>
+      <div class="description-tovar">An adaptable capacity so you can explore freely</div>
+      <a href="https://www.mi.com/global/product/xiaomi-roll-top-casual-backpack/">Learn More</a>
+    </div>
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+      </div>
+      <a href="https://www.mi.com/global/product-list/outdoor/">All Products</a>
+    </div>
+  </div>
+<h2 style="text-align:center; margin:6px 0 0;">Office</h2>
+
+<div class="bolshe"><a href="https://www.mi.com/global/product-list/office/">More</a></div>
+<div class="product-grid">
+    <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i02.appmifile.com/25_operatorx_operatorx_opx/20/08/2025/05b9b58a59d6e6d36ad54d99e0f9850a.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi Gaming 
+        Monitor G27i 2026
+</div>
+      <div class="description-tovar">27-inch fast IPS
+        200Hz high refresh rate
+      </div>
+      <a href="https://www.mi.com/global/product/xiaomi-gaming-monitor-g27i-2026/">Learn More</a>
+    </div>
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666873011.82114533.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi Wireless 
+        Keyboard and Mouse..</div>
+      <div class="description-tovar">Enjoy your wireless productivity</div>
+      <a href="https://www.mi.com/global/product/xiaomi-wireless-keyboard-and-mouse-combo/">Learn More</a>
+    </div>
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i02.appmifile.com/736_operatorx_operatorx_opx/29/02/2024/3ec432cd3c4e74ccb50461e7b6ba8a1b.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi Router
+        AX3000T</div>
+      <div class="description-tovar">Full-speed, full-home Wi-Fi 6 coverage</div>
+      <a href="https://www.mi.com/global/product/xiaomi-router-ax3000t/">Learn More</a>
+    </div>
+
+
+
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i02.appmifile.com/70_operatorx_operatorx_opx/16/07/2025/6024d9376f177c4792e2d9de0326f301.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi Wi-Fi Range
+        Extender AX1500</div>
+      <div class="description-tovar">High-speed Wi-Fi 6</div>
+      <a href="https://www.mi.com/global/product/xiaomi-wi-fi-range-extender-ax1500/">Learn More</a>
+    </div>
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i02.appmifile.com/168_operatorx_operatorx_opx/14/04/2023/1fe83bef35f0b7819bcd10f691019c1c.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi LCD Writing 
+        Tablet 13.5" (Color... </div>)
+      <div class="description-tovar">Draw on the move, capture moments with a full
+        pallette
+      </div>
+      <a href="https://www.mi.com/global/product/xiaomi-lcd-writing-tablet-13-5-inch-color-edition/">Learn More</a>
+    </div>
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i02.appmifile.com/109_operatorx_operatorx_opx/02/07/2025/f7b969cef6efee8a7f0296ec14ebe1df.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi 65W Power 
+      Dock</div>
+      <div class="description-tovar">Compact design
+        65W gallium nitride (GaN)
+      </div>
+      <a href="https://www.mi.com/global/product/xiaomi-65w-power-dock/">Learn More</a>
+    </div>
+     <div class="card-tovar">
+      <div class="img-tovar">
+        <img src="https://i02.appmifile.com/756_operatorx_operatorx_opx/02/07/2025/b54ee11d2ca047f43d7a0b7bf2c557a5.png?thumb=1&w=1000&f=webp&q=85" alt="Product 3">
+      </div>
+      <div class="name-tovar">Xiaomi Dual-interface
+        Flash Drive</div>
+      <div class="description-tovar">Dual-interface compatibility
+        High-speed data access 
+      </div>
+      <a href="https://www.mi.com/global/product/xiaomi-dual-interface-flash-drive/">Learn More</a>
+    </div>
+
+    <div class="card-tovar">
+      <div class="img-tovar">
+      </div>
+      <a href="https://www.mi.com/global/product-list/office/">All Products</a>
+    </div>
+
+  </div>

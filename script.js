@@ -1,79 +1,97 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const slidesContainer = document.querySelector('.slides-container');
-    const slideItems = document.querySelectorAll('.slide-item');
+    const slides = document.querySelectorAll('.slide-item');
+    const infoPanels = document.querySelectorAll('.info-panel');
     const prevButton = document.querySelector('.prev-button');
     const nextButton = document.querySelector('.next-button');
-    const sliderDotsContainer = document.querySelector('.slider-dots');
+    const slidesContainer = document.querySelector('.slides-container');
+    const sliderDots = document.querySelector('.slider-dots');
 
-    const totalSlides = slideItems.length;
     let currentIndex = 0;
-    const autoSlideInterval = 5000; // 5 секунд для автоматического переключения
-    let intervalId;
 
-    // Функция для обновления позиции слайдера
-    function updateSliderPosition() {
-        slidesContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
-        updateDots();
-    }
+    // Создание точек
+    slides.forEach((slide, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) {
+            dot.classList.add('active');
+        }
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
+        sliderDots.appendChild(dot);
+    });
 
-    // Функция для создания точек-индикаторов
-    function createDots() {
-        sliderDotsContainer.innerHTML = ''; // Очищаем существующие точки
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            dot.dataset.index = i;
-            dot.addEventListener('click', () => {
-                currentIndex = i;
-                updateSliderPosition();
-                resetAutoSlide();
-            });
-            sliderDotsContainer.appendChild(dot);
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlider() {
+        const slideWidth = slides[0].clientWidth;
+        slidesContainer.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+
+        // Обновление активных классов
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentIndex);
+        });
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+
+        // Скрываем все инфо-панели
+        infoPanels.forEach(panel => {
+            panel.classList.remove('active');
+        });
+
+        // Показываем нужную инфо-панель
+        const activeSlideProductId = slides[currentIndex].getAttribute('data-product-id');
+        const activePanel = document.querySelector(`.info-panel[data-product-id="${activeSlideProductId}"]`);
+        if (activePanel) {
+            activePanel.classList.add('active');
         }
     }
 
-    // Функция для обновления активной точки
-    function updateDots() {
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach((dot, index) => {
-            if (index === currentIndex) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
-        });
+    function goToSlide(index) {
+        currentIndex = index;
+        if (currentIndex < 0) {
+            currentIndex = slides.length - 1;
+        } else if (currentIndex >= slides.length) {
+            currentIndex = 0;
+        }
+        updateSlider();
     }
 
-    // Обработчик для кнопки "Вперед"
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateSliderPosition();
-        resetAutoSlide();
-    });
-
-    // Обработчик для кнопки "Назад"
     prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateSliderPosition();
-        resetAutoSlide();
+        goToSlide(currentIndex - 1);
     });
 
-    // Функция для запуска автоматического переключения слайдов
-    function startAutoSlide() {
-        intervalId = setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSliderPosition();
-        }, autoSlideInterval);
-    }
+    nextButton.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+    });
 
-    // Функция для сброса таймера автоматического переключения
-    function resetAutoSlide() {
-        clearInterval(intervalId);
-        startAutoSlide();
-    }
+    // Добавляем обработчики для точек
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
 
-    // Инициализация слайдера при загрузке страницы
-    createDots();
-    updateSliderPosition();
-    startAutoSlide(); // Запускаем авто-переключение
+    // Добавляем обработчик для переключения слайдов с помощью свайпа (опционально)
+    let startX = 0;
+    slidesContainer.addEventListener('mousedown', (e) => {
+        startX = e.clientX;
+    });
+
+    slidesContainer.addEventListener('mouseup', (e) => {
+        const endX = e.clientX;
+        const diff = startX - endX;
+        if (diff > 50) {
+            goToSlide(currentIndex + 1);
+        } else if (diff < -50) {
+            goToSlide(currentIndex - 1);
+        }
+    });
+
+    // Initial update
+    updateSlider();
+
+    // Event listener for window resize to fix slider position
+    window.addEventListener('resize', updateSlider);
 });

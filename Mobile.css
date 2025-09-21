@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: #fff;
+  background: #ffffff;
   color: #000;
 }
 
@@ -13,6 +13,7 @@ a {
   text-decoration: none;
   color: black;
 }
+
 
 header {
   display: flex;
@@ -25,7 +26,12 @@ header {
   top: 0;
   z-index: 1000;
 }
-
+.test{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .logo img {
   display: block;
 }
@@ -63,6 +69,57 @@ header {
   font-size: 15px;
   font-weight: bold;
 }
+.banner-container2 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 1500px;
+  margin: 20px auto;
+}
+
+.banner-container2 img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  
+  right: 10%; /* вместо left */
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  text-align: right; /* чтобы текст внутри выравнивался по правому краю */
+}
+.banner-text2 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.banner-text2 h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.banner-text2 p {
+  font-size: 18px;
+  margin: 5px 0 15px;
+}
+
+.banner-text2 a {
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 /* === Баннер === */
 .banner-section {
@@ -89,7 +146,7 @@ header {
 }
 
 .card-tovar {
-  width: 225px;
+  width: 250px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -104,16 +161,18 @@ header {
   transform: translateY(-5px);
 }
 /* планшет */
-.product-grid2{
+.product-grid2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 20px; 
-  max-width: 1200px; 
-  margin: 0 auto; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 30px; /* расстояние между карточками */
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  justify-items: center; /* карточки по центру */
 }
 
-.card-tovar2{
-  width: 325px;
+.card-tovar2 {
+  width: 100%; /* пусть занимает всю ширину ячейки */
+  max-width: 325px; /* но не больше */
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -124,17 +183,14 @@ header {
   padding: 30px;
   transition: transform 0.3s ease;
 }
-.img-tovar2 {
-  width: 100%;
-  height: 250px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; 
-  margin-bottom: 15px;
+.img-tovar2 img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* чтобы картинка полностью влезала */
+  display: block;
 }
 .name-tovar2 {
-  font-size: 12px;
+  font-size: 22px;
   font-weight: bold;
   color: #333;
   margin-bottom: 8px;
@@ -199,11 +255,7 @@ header {
 .card-tovar a:hover {
     background-color: #2e302d;
 }
-=======
-  border-radius: 12px;
-  display: block;
-  margin: 20px auto;
-}
+
 
 /* === Карточки продуктов === */
 .products {
