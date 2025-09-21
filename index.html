@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="https://img.icons8.com/?size=100&id=WovKWSCrsTFO&format=png&color=000000" width="40px" height="40px" a href="index.html">
+            <img src="https://img.icons8.com/?size=100&id=WovKWSCrsTFO&format=png&color=000000" width="40px" height="40px">
         </div>
 
         <div class="menu-buttons">
@@ -30,48 +30,103 @@
     </header>
 
     <div class="super-slider-wrapper">
-        <div class="super-slider-content">
-            <div class="info-panel">
-                <span class="tagline">Xiaomi HyperAI</span>
-                <h1 class="product-title">Xiaomi 15 Ultra</h1>
-                <p class="product-slogan">Pinnacle photografy</p>
-                <ul class="features-list">
-                    <li>Leica 1-inch main, 200MP telephoto</li>
-                    
-                </ul>
-                <button class="learn-more-button">Learn more</button>
-            </div>
+    <div class="super-slider-content">
+        <div class="info-panel active" data-product-id="pad-gray">
+            <span class="tagline">Xiaomi HyperAI</span>
+            <h1 class="product-title">XIAOMI  15 Ultra</h1>
+            <p class="product-slogan">Серый</p>
+            <ul class="features-list">
+                <li>Leica 1-inch main, 200MP telephoto</li>
+            </ul>
+            <button class="learn-more-button">Learn more</button>
+        </div>
+        
+        <div class="info-panel" data-product-id="pad-blue">
+            <span class="tagline">Xiaomi HyperAI</span>
+            <h1 class="product-title">Xiaomi Pad 7 Pro</h1>
+            <p class="product-slogan">Синий</p>
+            <ul class="features-list">
+                <li>Мощный процессор Snapdragon</li>
+                <li>Dolby Atmos, четыре динамика</li>
+            </ul>
+            <button class="learn-more-button">Learn more</button>
+        </div>
 
-            <div class="image-slider-area">
-                <div class="slides-container">
-                    <div class="slide-item">
-                        <img src="https://i02.appmifile.com/46_operator_global/02/03/2025/23c441853593554c52b3bdcb81e5f0f5.jpg?thumb=1&w=5120&f=webp&q=85" alt="Xiaomi Pad 7 Pro - Серый">
-                    </div>
-                    <div class="slide-item">
-                        <img src="https://shorthand.com/the-craft/raster-images/assets/5kVrMqC0wp/sh-unsplash_5qt09yibrok-4096x2731.jpeg" alt="Xiaomi Pad 7 Pro - Синий">
-                    </div>
-                    <div class="slide-item">
-                        <img src="https://shorthand.com/the-craft/raster-images/assets/5kVrMqC0wp/sh-unsplash_5qt09yibrok-4096x2731.jpeg" alt="Xiaomi Pad 7 Pro - Зеленый">
-                    </div>
-                    <div class="slide-item">
-                        <img src="https://shorthand.com/the-craft/raster-images/assets/5kVrMqC0wp/sh-unsplash_5qt09yibrok-4096x2731.jpeg" alt="Xiaomi Pad 7 Pro - Вид сбоку">
-                    </div>
-                </div>
+        <div class="info-panel" data-product-id="pad-green">
+            <span class="tagline">Xiaomi HyperAI</span>
+            <h1 class="product-title">Xiaomi Smart Band 10</h1>
+            <p class="product-slogan">Зеленый</p>
+            <ul class="features-list">
+                <li>14-дюймовый 2.8K IPS дисплей</li>
+                <li>Емкий аккумулятор 10000 мАч</li>
+            </ul>
+            <button class="learn-more-button">Learn more</button>
+        </div>
 
-                <button class="nav-button prev-button">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="nav-button next-button">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                
-                <div class="slider-dots">
+        <div class="image-slider-area">
+            <div class="slides-container">
+                <div class="slide-item active" data-product-id="pad-gray">
+                    <img src="https://i02.appmifile.com/46_operator_global/02/03/2025/23c441853593554c52b3bdcb81e5f0f5.jpg?thumb=1&w=5120&f=webp&q=85" alt="Xiaomi Pad 125 Pro - Серый">
+                </div>
+                <div class="slide-item" data-product-id="pad-blue">
+                    <img src="https://mobileplanet.ua/uploads/small_photos/2025-3-22/magazin-mobileplanet-xiaomi-pad-7-pro-8-256gb-gray-vhu5412eu-3394911556.webp" alt="Xiaomi Pad 7 Pro - Синий">
+                </div>
+                <div class="slide-item" data-product-id="pad-green">
+                    <img src="https://i02.appmifile.com/46_operator_global/02/03/2025/23c441853593554c52b3bdcb81e5f0f5.jpg?thumb=1&w=5120&f=webp&q=85" alt="Xiaomi Pad 7 Pro - Зеленый">
                 </div>
             </div>
+            <button class="nav-button prev-button">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="nav-button next-button">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <div class="slider-dots">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="product-grid">
+        <div class="card-tovar">
+            <div class="img-tovar"> 
+                <img src="https://i02.appmifile.com/212_operatorx_operatorx_opx/02/04/2025/8b179305518a376ee1ca5cdc22b5b554.png?thumb=1&w=320&f=webp&q=85" alt="REDMI Note 14 Pro+ 5G">
+            </div>
+            <div class="name-tovar">REDMI Note 14 Pro+ 5G</div>
+            <div class="description-tovar">Pinnacle photography</div>
+            <a href="#">Learn more</a>
+        </div>
+
+        <div class="card-tovar">
+            <div class="img-tovar"> 
+                <img src="https://i02.appmifile.com/796_operatorx_operatorx_opx/23/06/2025/fd50b8df4e716c892c6b83d6d40eec9b.png?thumb=1&w=320&f=webp&q=85" alt="Xiaomi Smart Band 10">
+            </div>
+            <div class="name-tovar">Xiaomi Smart Band 10</div>
+            <div class="description-tovar">Experience the future today with this amazing device.</div>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="card-tovar">
+            <div class="img-tovar"> 
+                <img src="https://i02.appmifile.com/228_operatorx_operatorx_opx/02/03/2025/5e807873e6d2f271fac34e4c217ec2cd.png?thumb=1&w=320&f=webp&q=85" alt="Xiaomi Watch S4">
+            </div>
+            <div class="name-tovar">Xiaomi Watch S4</div>
+            <div class="description-tovar">Track your fitness and stay connected on the go.</div>
+            <a href="#">Learn More</a>
+        </div>
+
+        <div class="card-tovar">
+            <div class="img-tovar"> 
+                <img src="https://i02.appmifile.com/240_operatorx_operatorx_opx/02/03/2025/535cc294bdd08b430b3fe9f0c52d3875.png?thumb=1&w=320&f=webp&q=85" alt="Xiaomi Buds 5 Pro">
+            </div>
+            <div class="name-tovar">Xiaomi Buds 5 Pro</div>
+            <div class="description-tovar">Immersive sound and comfort for your daily rhythm.</div>
+            <a href="#">Learn More</a>
         </div>
     </div>
     

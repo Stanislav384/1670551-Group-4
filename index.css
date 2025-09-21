@@ -170,7 +170,6 @@
 .next-button {
     right: 10px; /* Уменьшено в 0.5 раза */
 }
-
 .slider-dots {
     position: absolute;
     bottom: 15px; /* Уменьшено в 0.5 раза */
@@ -309,7 +308,92 @@
         min-height: 125px;
     }
 }
-.tekst{
-    text-align: center;
-    font-size: 35px;
+
+.info-panel {
+    display: none;
 }
+
+.info-panel.active {
+    display: flex;
+}
+
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; 
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5; 
+            padding: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        .card-tovar {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-tovar:hover {
+            transform: translateY(-5px);
+        }
+
+        .img-tovar {
+            width: 100%;
+            height: 250px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; 
+            margin-bottom: 15px;
+        }
+
+        .img-tovar img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; 
+        }
+
+        .name-tovar {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+.description-tovar {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .card-tovar a {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: auto; 
+        }
+
+        .card-tovar a:hover {
+            background-color: #0056b3;
+        }
